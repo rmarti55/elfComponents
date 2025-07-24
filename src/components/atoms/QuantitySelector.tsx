@@ -51,7 +51,7 @@ const QuantitySelector: React.FC<QuantitySelectorProps> = ({
           fontWeight: "bold",
           color: "#111827",
           padding: "0 8px",
-          fontFamily: "Inter, system-ui, sans-serif",
+          fontFamily: "Futura, sans-serif",
         }}
       >
         {quantity}
