@@ -9,7 +9,7 @@
     "lint": "eslint .",
     "preview": "vite preview",
     "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build --no-manager-cache"
+    "build-storybook": "storybook build"
   },
   "dependencies": {
     "@chakra-ui/provider": "^2.4.2",
