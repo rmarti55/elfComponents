@@ -37,16 +37,19 @@ const SimpleCartItemTile: React.FC<SimpleCartItemTileProps> = ({
         background: "#fff",
         padding: 12,
         borderRadius: 0,
-        width: 370,
+        width: 420,
+        minHeight: 160,
       }}
     >
-      <ImageTile
-        imageUrl={imageUrl}
-        isFavorited={isFavorited}
-        onFavoriteToggle={onFavoriteToggle}
-        productName={productName}
-      />
-      <div style={{ flex: 1, display: "flex", flexDirection: "column", gap: 8 }}>
+      <div style={{ width: 120, minWidth: 120, height: 120 }}>
+        <ImageTile
+          imageUrl={imageUrl}
+          isFavorited={isFavorited}
+          onFavoriteToggle={onFavoriteToggle}
+          productName={productName}
+        />
+      </div>
+      <div style={{ flex: 1, display: "flex", flexDirection: "column", gap: 8, minWidth: 0 }}>
         <CartItemTextBlock
           productName={productName}
           promoMessages={promoMessages}
