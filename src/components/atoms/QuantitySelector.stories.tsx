@@ -9,7 +9,7 @@ const meta: Meta<typeof QuantitySelector> = {
   parameters: {
     layout: 'centered',
   },
-  tags: ['autodocs'],
+  tags: [],
   argTypes: {
     quantity: {
       control: { type: 'number', min: 0 },
