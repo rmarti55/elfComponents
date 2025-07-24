@@ -38,11 +38,11 @@ const SimpleCartItemTile: React.FC<SimpleCartItemTileProps> = ({
         minHeight: 120,
         display: "flex",
         flexDirection: "column",
-        gap: 12,
+        gap: 0,
       }}
     >
       <div style={{ display: "flex", alignItems: "flex-start", gap: 16 }}>
-        <div style={{ width: 100, height: 100, flex: 'none', display: 'flex', alignItems: 'flex-start', justifyContent: 'center' }}>
+        <div style={{ width: 100, flex: 'none', display: 'flex', alignItems: 'flex-start', justifyContent: 'center' }}>
           <ImageTile
             imageUrl={imageUrl}
             isFavorited={isFavorited}
@@ -58,7 +58,7 @@ const SimpleCartItemTile: React.FC<SimpleCartItemTileProps> = ({
           />
         </div>
       </div>
-      <div style={{ width: '100%' }}>
+      <div style={{ width: '100%', marginTop: 8 }}>
         <QuantityPricing
           quantity={quantity}
           unitPrice={unitPrice}
