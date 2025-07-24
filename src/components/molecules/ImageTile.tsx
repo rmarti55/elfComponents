@@ -34,7 +34,6 @@ const ImageTile: React.FC<ImageTileProps> = ({
           objectFit: "cover",
           objectPosition: "center",
         }}/>
-    >
       <button
         onClick={onFavoriteToggle}
         style={{
