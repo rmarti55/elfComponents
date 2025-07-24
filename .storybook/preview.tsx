@@ -1,4 +1,5 @@
 import type { Preview } from '@storybook/react-vite'
+import { ChakraProvider } from '@chakra-ui/provider'
 import React from 'react'
 
 const preview: Preview = {
@@ -10,6 +11,13 @@ const preview: Preview = {
       },
     },
   },
+  decorators: [
+    (Story) => (
+      <ChakraProvider>
+        <Story />
+      </ChakraProvider>
+    ),
+  ],
 };
 
 export default preview; 
