@@ -35,36 +35,54 @@ const SimpleCartItemTile: React.FC<SimpleCartItemTileProps> = ({
         padding: 20,
         borderRadius: 0,
         width: 370,
-        minHeight: 80,
         display: "flex",
         flexDirection: "column",
-        gap: 0,
+        gap: 12,
       }}
     >
-      <div style={{ display: "flex", alignItems: "flex-start", gap: 16 }}>
-        <div style={{ width: 80, height: 80, flex: 'none', display: 'flex', alignItems: 'flex-start', justifyContent: 'center' }}>
+      <div style={{ display: "flex", alignItems: "flex-start", gap: 12 }}>
+        <div
+          style={{
+            width: 80,
+            height: 80,
+            flexShrink: 0,
+            display: "flex",
+            alignItems: "flex-start",
+            justifyContent: "center",
+          }}
+        >
           <ImageTile
             imageUrl={imageUrl}
             isFavorited={isFavorited}
             onFavoriteToggle={onFavoriteToggle}
             productName={productName}
+            width={80}
+            height={80}
           />
         </div>
-        <div style={{ flex: 1, display: "flex", flexDirection: "column", alignItems: "flex-start", gap: 0, minWidth: 0 }}>
+
+        <div
+          style={{
+            flex: 1,
+            minWidth: 0,
+            display: "flex",
+            flexDirection: "column",
+            gap: 4,
+          }}
+        >
           <CartItemTextBlock
             productName={productName}
             promoMessages={promoMessages}
             onRemove={onRemove}
           />
+
+          <QuantityPricing
+            quantity={quantity}
+            unitPrice={unitPrice}
+            discountedPrice={discountedPrice}
+            onQuantityChange={onQuantityChange}
+          />
         </div>
-      </div>
-      <div style={{ width: '100%', marginTop: 8 }}>
-        <QuantityPricing
-          quantity={quantity}
-          unitPrice={unitPrice}
-          discountedPrice={discountedPrice}
-          onQuantityChange={onQuantityChange}
-        />
       </div>
     </div>
   );

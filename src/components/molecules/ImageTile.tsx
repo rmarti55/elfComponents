@@ -6,6 +6,8 @@ interface ImageTileProps {
   isFavorited: boolean;
   onFavoriteToggle: () => void;
   productName: string;
+  width?: number | string;
+  height?: number | string;
 }
 
 const ImageTile: React.FC<ImageTileProps> = ({
@@ -13,13 +15,15 @@ const ImageTile: React.FC<ImageTileProps> = ({
   isFavorited,
   onFavoriteToggle,
   productName,
+  width = 80,
+  height = 80,
 }) => {
   return (
     <div
       style={{
         position: "relative",
-        width: "200px",
-        height: "200px",
+        width: typeof width === 'number' ? `${width}px` : width,
+        height: typeof height === 'number' ? `${height}px` : height,
         overflow: "hidden",
         backgroundImage: `url(${imageUrl})`,
         backgroundSize: "cover",
