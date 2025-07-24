@@ -1,69 +1,165 @@
-# React + TypeScript + Vite
+# e.l.f. Components
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A clean, atomic design-based component library for e.l.f. cosmetics, built with React, TypeScript, Vite, and Storybook.
 
-Currently, two official plugins are available:
+## 🎯 Project Overview
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+This is a component library specifically designed for e.l.f. cosmetics, following atomic design principles. All components are developed and previewed exclusively in Storybook, which is deployed to Vercel for easy access.
 
-## Expanding the ESLint configuration
+## 🏗️ Architecture
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
-
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+### Atomic Design Structure
+```
+src/
+├── foundations/          # Design tokens, theme, and foundational elements
+├── components/
+│   ├── atoms/           # Basic building blocks (buttons, inputs, etc.)
+│   ├── molecules/       # Simple combinations of atoms
+│   └── organisms/       # Complex UI sections
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+### Technology Stack
+- **React 19** + **TypeScript** - Modern component development
+- **Vite** - Fast build tool and development server
+- **Storybook 9** - Component documentation and preview layer
+- **Chakra UI 3** - Component library and styling system
+- **Lucide React** - Icon library
+- **Vercel** - Deployment platform
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## 🚀 Current Status
 
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+### ✅ Completed Setup
+- [x] React + TypeScript + Vite project initialized
+- [x] Storybook configured and deployed to Vercel
+- [x] Chakra UI integrated with custom theme
+- [x] Atomic design folder structure created
+- [x] First atom component (QuantitySelector) implemented
+- [x] Clean Storybook deployment (no default Chakra UI components)
+- [x] Automatic GitHub → Vercel deployment pipeline
+
+### 🎨 Components Available
+
+#### Atoms
+- **QuantitySelector** - Interactive quantity control with increase/decrease buttons
+  - Features: Disabled states, zero quantity handling, customizable styling
+  - Stories: Default, Zero, HighQuantity, Disabled, DisabledAtZero
+
+## 📁 Project Structure
+
 ```
+elfComponents/
+├── .storybook/                    # Storybook configuration
+│   ├── main.ts                   # Storybook main config (clean, no auto-docs)
+│   └── preview.tsx               # Storybook preview configuration
+├── src/
+│   ├── foundations/              # Design tokens and theme
+│   │   └── theme.ts              # Chakra UI theme configuration
+│   ├── components/
+│   │   ├── atoms/                # Atomic components
+│   │   │   ├── QuantitySelector.tsx
+│   │   │   ├── QuantitySelector.stories.tsx
+│   │   │   └── index.ts
+│   │   ├── molecules/            # Molecular components (empty)
+│   │   └── organisms/            # Organism components (empty)
+│   ├── App.tsx                   # Main application (minimal)
+│   └── main.tsx                  # Application entry point
+├── vercel.json                   # Vercel deployment configuration
+├── package.json                  # Dependencies and scripts
+└── README.md                     # This file
+```
+
+## 🛠️ Development
+
+### Prerequisites
+- Node.js 18+
+- npm or yarn
+
+### Local Development
+```bash
+# Install dependencies
+npm install
+
+# Start Storybook locally (for development)
+npm run storybook
+
+# Start main app locally
+npm run dev
+
+# Build for production
+npm run build
+```
+
+### Adding New Components
+
+1. **Create component** in appropriate atomic design folder:
+   ```bash
+   # Example: Adding a new atom
+   src/components/atoms/NewComponent.tsx
+   ```
+
+2. **Create Storybook story**:
+   ```bash
+   src/components/atoms/NewComponent.stories.tsx
+   ```
+
+3. **Export from index**:
+   ```bash
+   # Add to src/components/atoms/index.ts
+   export { default as NewComponent } from './NewComponent'
+   ```
+
+4. **Commit and push** - Automatic deployment to Vercel
+
+## 🌐 Deployment
+
+### Storybook Deployment
+- **URL**: https://vercel.com/rmarti55s-projects/elf-components/deployments
+- **Auto-deploy**: Every push to `main` branch triggers deployment
+- **Clean**: Only shows custom components, no default Chakra UI components
+
+### Build Configuration
+- **Framework**: Storybook
+- **Build Command**: `npm run build-storybook --no-manager-cache`
+- **Output Directory**: `storybook-static`
+
+## 🎨 Design System
+
+### Theme Configuration
+- **Colors**: e.l.f. brand colors + gray scale
+- **Typography**: Inter font family
+- **Spacing**: Consistent 8px grid system
+- **Breakpoints**: Mobile-first responsive design
+
+### Component Guidelines
+- Use Chakra UI as the foundation
+- Extend with e.l.f. specific styling
+- Include comprehensive Storybook stories
+- Follow atomic design principles
+- Export through index files for clean imports
+
+## 📝 Recent Changes
+
+### Latest Updates
+- ✅ Removed all Chakra UI auto-documentation from Storybook
+- ✅ Implemented clean component-only Storybook deployment
+- ✅ Added QuantitySelector as first atom component
+- ✅ Configured automatic GitHub → Vercel deployment
+- ✅ Set up atomic design folder structure
+
+## 🔧 Configuration Files
+
+### Key Configuration
+- **`.storybook/main.ts`** - Clean Storybook config (no auto-docs)
+- **`vercel.json`** - Vercel deployment settings
+- **`src/foundations/theme.ts`** - Chakra UI theme configuration
+
+## 🎯 Next Steps
+
+1. **Add more e.l.f. components** from screenshots and existing code
+2. **Expand atomic design system** with molecules and organisms
+3. **Enhance theme** with specific e.l.f. brand colors
+4. **Add component documentation** and usage guidelines
+
+---
+
+**Note**: This is a clean, focused component library. All components live in Storybook as the primary interface. The main app serves as a minimal example and is not the primary development environment.
