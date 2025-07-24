@@ -36,7 +36,6 @@ const QuantityPricing: React.FC<QuantityPricingProps> = ({
       style={{
         display: "flex",
         alignItems: "center",
-        justifyContent: "space-between",
         width: "100%",
         fontFamily: "Futura, sans-serif",
         padding: "0 16px",
@@ -53,7 +52,8 @@ const QuantityPricing: React.FC<QuantityPricingProps> = ({
         style={{
           display: "flex",
           alignItems: "center",
-          gap: "16px",
+          gap: "4px",
+          marginLeft: "4px",
         }}
       >
         <div
@@ -68,39 +68,31 @@ const QuantityPricing: React.FC<QuantityPricingProps> = ({
           <span>x</span>
         </div>
 
-        {discountedPrice && (
-          <div
-            style={{
-              display: "flex",
-              alignItems: "center",
-              gap: "8px",
-              fontSize: "14px",
-            }}
-          >
-            <span
-              style={{
-                textDecoration: "line-through",
-                color: "#9ca3af",
-              }}
-            >
-              ${unitPriceDisplay}
-            </span>
-            <span
-              style={{
-                color: "#dc2626",
-                fontWeight: "500",
-              }}
-            >
-              ${discountedPrice ? discountedPrice.toFixed(2) : unitPriceDisplay}
-            </span>
-          </div>
-        )}
+        <span
+          style={{
+            textDecoration: "line-through",
+            color: "#9ca3af",
+            fontSize: "14px",
+          }}
+        >
+          ${unitPriceDisplay}
+        </span>
+        <span
+          style={{
+            color: "#dc2626",
+            fontWeight: "500",
+            fontSize: "14px",
+          }}
+        >
+          ${discountedPrice ? discountedPrice.toFixed(2) : unitPriceDisplay}
+        </span>
 
         <div
           style={{
             fontSize: "16px",
             fontWeight: "700",
             color: "#111827",
+            marginLeft: "auto",
           }}
         >
           ${(quantity * (discountedPrice || unitPrice)).toFixed(2)}
