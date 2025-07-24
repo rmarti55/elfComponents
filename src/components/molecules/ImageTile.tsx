@@ -20,7 +20,6 @@ const ImageTile: React.FC<ImageTileProps> = ({
         position: "relative",
         width: "200px",
         height: "200px",
-        borderRadius: "8px",
         overflow: "hidden",
         backgroundImage: `url(${imageUrl})`,
         backgroundSize: "cover",
@@ -61,4 +60,4 @@ const ImageTile: React.FC<ImageTileProps> = ({
   );
 };
 
-export default ImageTile; 
+export default ImageTile;
