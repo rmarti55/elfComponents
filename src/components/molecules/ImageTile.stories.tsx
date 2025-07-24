@@ -44,35 +44,35 @@ const ImageTileWithState = (args: any) => {
 export const Default: Story = {
   render: (args) => <ImageTileWithState {...args} />,
   args: {
-    imageUrl: "https://images.unsplash.com/photo-1596462502278-27bfdc403348?w=200&h=200&fit=crop",
+    imageUrl: "/images/85400_OpenA_2_V4_R.avif",
     isFavorited: false,
-    productName: "ELF Camo Liquid Blush",
+    productName: "ELF Product 85400",
   },
 }
 
 export const Favorited: Story = {
   render: (args) => <ImageTileWithState {...args} />,
   args: {
-    imageUrl: "https://images.unsplash.com/photo-1596462502278-27bfdc403348?w=200&h=200&fit=crop",
+    imageUrl: "/images/031725_elf_JP_Collection_Bag_064_CLEAN_PLATE_FINAL_IGF.avif",
     isFavorited: true,
-    productName: "ELF Camo Liquid Blush",
+    productName: "ELF Collection Bag",
   },
 }
 
 export const Lipstick: Story = {
   render: (args) => <ImageTileWithState {...args} />,
   args: {
-    imageUrl: "https://images.unsplash.com/photo-1586495777744-4413f21062fa?w=200&h=200&fit=crop",
+    imageUrl: "/images/57014_SCMOI_Closed_R.avif",
     isFavorited: false,
-    productName: "ELF Lipstick",
+    productName: "ELF Lipstick 57014",
   },
 }
 
 export const Foundation: Story = {
   render: (args) => <ImageTileWithState {...args} />,
   args: {
-    imageUrl: "https://images.unsplash.com/photo-1556228720-195a672e8a03?w=200&h=200&fit=crop",
+    imageUrl: "/images/82680_OpenA_V3_R.avif",
     isFavorited: false,
-    productName: "ELF Foundation",
+    productName: "ELF Foundation 82680",
   },
 } 
