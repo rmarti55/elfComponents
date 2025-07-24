@@ -34,15 +34,15 @@ const SimpleCartItemTile: React.FC<SimpleCartItemTileProps> = ({
         background: "#fff",
         padding: 20,
         borderRadius: 0,
-        width: 380,
-        minHeight: 120,
+        width: 370,
+        minHeight: 80,
         display: "flex",
         flexDirection: "column",
         gap: 0,
       }}
     >
       <div style={{ display: "flex", alignItems: "flex-start", gap: 16 }}>
-        <div style={{ width: 100, flex: 'none', display: 'flex', alignItems: 'flex-start', justifyContent: 'center' }}>
+        <div style={{ width: 80, height: 80, flex: 'none', display: 'flex', alignItems: 'flex-start', justifyContent: 'center' }}>
           <ImageTile
             imageUrl={imageUrl}
             isFavorited={isFavorited}
@@ -50,7 +50,7 @@ const SimpleCartItemTile: React.FC<SimpleCartItemTileProps> = ({
             productName={productName}
           />
         </div>
-        <div style={{ flex: 1, maxWidth: 260, display: "flex", flexDirection: "column", alignItems: "flex-start", gap: 0, minWidth: 0 }}>
+        <div style={{ flex: 1, display: "flex", flexDirection: "column", alignItems: "flex-start", gap: 0, minWidth: 0 }}>
           <CartItemTextBlock
             productName={productName}
             promoMessages={promoMessages}
