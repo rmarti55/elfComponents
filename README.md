@@ -145,6 +145,9 @@ npm run build
 - Follow atomic design principles
 - Export through index files for clean imports
 
+### Atomic Storybook Coverage
+- **Every atom must have its own Storybook story.** Never skip atomic-level documentation. This ensures visibility, testability, and proper design system hygiene.
+
 ## 📝 Recent Changes
 
 ### Latest Updates
