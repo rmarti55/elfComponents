@@ -29,6 +29,9 @@ const QuantityPricing: React.FC<QuantityPricingProps> = ({
   const currentPrice = discountedPrice || unitPrice;
   const totalPrice = quantity * currentPrice;
   const originalTotal = quantity * unitPrice;
+  const unitPriceDisplay = unitPrice.toFixed(2);
+  const totalPriceDisplay = totalPrice.toFixed(2);
+  const originalTotalDisplay = originalTotal.toFixed(2);
 
   return (
     <div
@@ -65,7 +68,7 @@ const QuantityPricing: React.FC<QuantityPricingProps> = ({
           }}
         >
           <span>x</span>
-          <span>${unitPrice.toFixed(2)}</span>
+          <span>${unitPriceDisplay}</span>
         </div>
 
         {discountedPrice && (
@@ -83,7 +86,7 @@ const QuantityPricing: React.FC<QuantityPricingProps> = ({
                 color: "#9ca3af",
               }}
             >
-              ${originalTotal.toFixed(2)}
+              ${originalTotalDisplay}
             </span>
             <span
               style={{
@@ -91,7 +94,7 @@ const QuantityPricing: React.FC<QuantityPricingProps> = ({
                 fontWeight: "500",
               }}
             >
-              ${totalPrice.toFixed(2)}
+              ${totalPriceDisplay}
             </span>
           </div>
         )}
@@ -103,7 +106,7 @@ const QuantityPricing: React.FC<QuantityPricingProps> = ({
             color: "#111827",
           }}
         >
-          ${totalPrice.toFixed(2)}
+          ${totalPriceDisplay}
         </div>
       </div>
     </div>
