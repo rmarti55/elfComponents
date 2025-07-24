@@ -1,5 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react'
 import { useState } from 'react'
+import { ChakraProvider } from '@chakra-ui/provider'
 import QuantitySelector from './QuantitySelector'
 
 const meta: Meta<typeof QuantitySelector> = {
@@ -29,12 +30,14 @@ const QuantitySelectorWithState = (args: any) => {
   const [quantity, setQuantity] = useState(args.quantity || 0)
   
   return (
-    <QuantitySelector
-      {...args}
-      quantity={quantity}
-      onDecrease={() => setQuantity(Math.max(0, quantity - 1))}
-      onIncrease={() => setQuantity(quantity + 1)}
-    />
+    <ChakraProvider>
+      <QuantitySelector
+        {...args}
+        quantity={quantity}
+        onDecrease={() => setQuantity(Math.max(0, quantity - 1))}
+        onIncrease={() => setQuantity(quantity + 1)}
+      />
+    </ChakraProvider>
   )
 }
 
