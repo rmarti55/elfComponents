@@ -34,8 +34,11 @@ const SimpleCartItemTile: React.FC<SimpleCartItemTileProps> = ({
         background: "#fff",
         padding: 20,
         borderRadius: 0,
-        width: 600,
+        width: 380,
         minHeight: 120,
+        display: "flex",
+        flexDirection: "column",
+        gap: 12,
       }}
     >
       <div style={{ display: "flex", alignItems: "flex-start", gap: 16 }}>
@@ -47,7 +50,7 @@ const SimpleCartItemTile: React.FC<SimpleCartItemTileProps> = ({
             productName={productName}
           />
         </div>
-        <div style={{ flex: 1, maxWidth: 380, display: "flex", flexDirection: "column", alignItems: "flex-start", gap: 0, minWidth: 0 }}>
+        <div style={{ flex: 1, maxWidth: 260, display: "flex", flexDirection: "column", alignItems: "flex-start", gap: 0, minWidth: 0 }}>
           <CartItemTextBlock
             productName={productName}
             promoMessages={promoMessages}
@@ -55,7 +58,7 @@ const SimpleCartItemTile: React.FC<SimpleCartItemTileProps> = ({
           />
         </div>
       </div>
-      <div style={{ marginTop: 16, width: '100%' }}>
+      <div style={{ width: '100%' }}>
         <QuantityPricing
           quantity={quantity}
           unitPrice={unitPrice}
