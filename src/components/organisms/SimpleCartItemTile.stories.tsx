@@ -30,8 +30,10 @@ const meta: Meta<typeof SimpleCartItemTile> = {
   decorators: [
     (Story) => (
       <div style={{ 
-        width: '100%', 
-        padding: '16px',
+        width: '100%',
+        maxWidth: '100%',
+        padding: 0,
+        margin: 0,
         boxSizing: 'border-box',
       }}>
         <Story />
