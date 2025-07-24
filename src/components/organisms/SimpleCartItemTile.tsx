@@ -30,9 +30,6 @@ const SimpleCartItemTile: React.FC<SimpleCartItemTileProps> = ({
   return (
     <div
       style={{
-        display: "flex",
-        alignItems: "flex-start",
-        gap: 16,
         fontFamily: "Futura, sans-serif",
         background: "#fff",
         padding: 20,
@@ -41,28 +38,30 @@ const SimpleCartItemTile: React.FC<SimpleCartItemTileProps> = ({
         minHeight: 120,
       }}
     >
-      <div style={{ width: 120, height: 120, flex: 'none', display: 'flex', alignItems: 'flex-start', justifyContent: 'center' }}>
-        <ImageTile
-          imageUrl={imageUrl}
-          isFavorited={isFavorited}
-          onFavoriteToggle={onFavoriteToggle}
-          productName={productName}
-        />
-      </div>
-      <div style={{ flex: 1, maxWidth: 340, display: "flex", flexDirection: "column", alignItems: "flex-start", gap: 0, minWidth: 0 }}>
-        <CartItemTextBlock
-          productName={productName}
-          promoMessages={promoMessages}
-          onRemove={onRemove}
-        />
-        <div style={{ marginTop: 8, width: '100%' }}>
-          <QuantityPricing
-            quantity={quantity}
-            unitPrice={unitPrice}
-            discountedPrice={discountedPrice}
-            onQuantityChange={onQuantityChange}
+      <div style={{ display: "flex", alignItems: "flex-start", gap: 16 }}>
+        <div style={{ width: 100, height: 100, flex: 'none', display: 'flex', alignItems: 'flex-start', justifyContent: 'center' }}>
+          <ImageTile
+            imageUrl={imageUrl}
+            isFavorited={isFavorited}
+            onFavoriteToggle={onFavoriteToggle}
+            productName={productName}
           />
         </div>
+        <div style={{ flex: 1, maxWidth: 380, display: "flex", flexDirection: "column", alignItems: "flex-start", gap: 0, minWidth: 0 }}>
+          <CartItemTextBlock
+            productName={productName}
+            promoMessages={promoMessages}
+            onRemove={onRemove}
+          />
+        </div>
+      </div>
+      <div style={{ marginTop: 16, width: '100%' }}>
+        <QuantityPricing
+          quantity={quantity}
+          unitPrice={unitPrice}
+          discountedPrice={discountedPrice}
+          onQuantityChange={onQuantityChange}
+        />
       </div>
     </div>
   );
