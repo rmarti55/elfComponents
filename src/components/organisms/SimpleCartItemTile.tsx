@@ -32,17 +32,29 @@ const SimpleCartItemTile: React.FC<SimpleCartItemTileProps> = ({
       style={{
         fontFamily: "Futura, sans-serif",
         background: "#fff",
-        padding: 20,
+        padding: "clamp(16px, 5%, 20px)",
         borderRadius: 0,
-        width: 370,
-        minHeight: 80,
+        width: "100%",
+        maxWidth: "500px",
+        minWidth: "280px",
+        minHeight: "80px",
         display: "flex",
         flexDirection: "column",
         gap: 0,
       }}
     >
-      <div style={{ display: "flex", alignItems: "flex-start", gap: 16 }}>
-        <div style={{ width: 120, height: 120, flex: 'none', display: 'flex', alignItems: 'flex-start', justifyContent: 'center', position: 'relative', overflow: 'hidden', borderRadius: 8 }}>
+      <div style={{ display: "flex", alignItems: "flex-start", gap: "clamp(12px, 3%, 16px)" }}>
+        <div style={{ 
+          width: "clamp(100px, 30%, 140px)", 
+          height: "clamp(100px, 30%, 140px)", 
+          flex: 'none', 
+          display: 'flex', 
+          alignItems: 'flex-start', 
+          justifyContent: 'center', 
+          position: 'relative', 
+          overflow: 'hidden', 
+          borderRadius: "8px",
+        }}>
           <ImageTile
             imageUrl={imageUrl}
             isFavorited={isFavorited}
