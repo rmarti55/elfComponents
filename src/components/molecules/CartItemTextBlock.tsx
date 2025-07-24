@@ -1,4 +1,5 @@
 import React from "react";
+import { RemoveButton } from "../atoms";
 
 interface CartItemTextBlockProps {
   productName: string;
@@ -31,23 +32,7 @@ const CartItemTextBlock: React.FC<CartItemTextBlockProps> = ({
           {msg}
         </div>
       ))}
-      <button
-        onClick={onRemove}
-        style={{
-          marginTop: 12,
-          padding: 0,
-          border: "none",
-          background: "none",
-          color: "#111",
-          fontSize: 14,
-          textTransform: "uppercase",
-          textDecoration: "underline",
-          cursor: "pointer",
-          fontWeight: 400,
-        }}
-      >
-        Remove
-      </button>
+      <RemoveButton onClick={onRemove}>Remove</RemoveButton>
     </div>
   );
 };
