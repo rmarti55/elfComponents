@@ -168,6 +168,24 @@ npm run build
 3. **Enhance theme** with specific e.l.f. brand colors
 4. **Add component documentation** and usage guidelines
 
+## ⚠️ CRITICAL DEVELOPMENT RULES
+
+### Screenshot Analysis Protocol
+**NEVER assume or interpret - only implement what you see:**
+1. **Look at the actual visual elements** in screenshots, not what you expect to see
+2. **Count and identify each element** exactly as it appears
+3. **Follow the layout order precisely** - left to right, top to bottom
+4. **Don't add redundant elements** - if a price appears once, don't show it multiple times
+5. **Question your assumptions** - if something seems "wrong," the screenshot is right, you're wrong
+
+### Common Mistakes to Avoid
+- **Redundant pricing displays** - showing unit price in multiple places
+- **Incorrect math assumptions** - calculating totals when unit prices are needed
+- **Layout misinterpretation** - reading "x $10.00" when it's just "x" + "$10.00"
+- **Overcomplicating simple layouts** - adding elements that don't exist in the reference
+
+**Remember: The screenshot is the source of truth. Your interpretation is often wrong.**
+
 ---
 
 **Note**: This is a clean, focused component library. All components live in Storybook as the primary interface. The main app serves as a minimal example and is not the primary development environment.
