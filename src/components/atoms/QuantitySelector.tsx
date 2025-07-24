@@ -1,6 +1,5 @@
 import React from "react";
 import { Minus, Plus } from "lucide-react";
-import { Box, Button, Text } from "@chakra-ui/react";
 
 interface QuantitySelectorProps {
   quantity: number;
@@ -16,58 +15,66 @@ const QuantitySelector: React.FC<QuantitySelectorProps> = ({
   disabled = false,
 }) => {
   return (
-    <Box
-      display="flex"
-      alignItems="center"
-      border="1px solid"
-      borderColor="gray.300"
-      borderRadius="full"
-      bg="white"
+    <div
+      style={{
+        display: "flex",
+        alignItems: "center",
+        border: "1px solid #d1d5db",
+        borderRadius: "9999px",
+        backgroundColor: "white",
+        padding: "4px",
+      }}
     >
-      <Button
+      <button
         onClick={onDecrease}
         disabled={disabled || quantity <= 0}
-        variant="ghost"
-        size="sm"
-        w="32px"
-        h="32px"
-        p="0"
-        color="gray.900"
-        _hover={{ color: "gray.700" }}
-        _disabled={{ color: "gray.300", cursor: "not-allowed" }}
+        style={{
+          background: "none",
+          border: "none",
+          width: "32px",
+          height: "32px",
+          padding: "0",
+          color: "#111827",
+          cursor: disabled || quantity <= 0 ? "not-allowed" : "pointer",
+          opacity: disabled || quantity <= 0 ? 0.3 : 1,
+        }}
         aria-label="Decrease quantity"
       >
         <Minus size={16} />
-      </Button>
+      </button>
       
-      <Text
-        flex="1"
-        textAlign="center"
-        fontSize="sm"
-        fontWeight="bold"
-        color="gray.900"
-        px="2"
-        fontFamily="Futura, sans-serif"
+      <span
+        style={{
+          flex: "1",
+          textAlign: "center",
+          fontSize: "14px",
+          fontWeight: "bold",
+          color: "#111827",
+          padding: "0 8px",
+          fontFamily: "Inter, system-ui, sans-serif",
+        }}
       >
         {quantity}
-      </Text>
+      </span>
       
-      <Button
+      <button
         onClick={onIncrease}
         disabled={disabled}
-        variant="ghost"
-        size="sm"
-        w="32px"
-        h="32px"
-        p="0"
-        color="gray.900"
-        _hover={{ color: "gray.700" }}
-        _disabled={{ color: "gray.300", cursor: "not-allowed" }}
+        style={{
+          background: "none",
+          border: "none",
+          width: "32px",
+          height: "32px",
+          padding: "0",
+          color: "#111827",
+          cursor: disabled ? "not-allowed" : "pointer",
+          opacity: disabled ? 0.3 : 1,
+        }}
         aria-label="Increase quantity"
       >
         <Plus size={16} />
-      </Button>
-    </Box>
+      </button>
+    </div>
   );
 };
 
