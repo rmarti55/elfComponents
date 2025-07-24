@@ -1,6 +1,6 @@
 import React from "react";
 import { Minus, Plus } from "lucide-react";
-import { Box, Button, Text, HStack } from "@chakra-ui/react";
+import { Box, Button, Text } from "@chakra-ui/react";
 
 interface QuantitySelectorProps {
   quantity: number;
