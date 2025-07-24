@@ -38,6 +38,7 @@ const QuantityPricing: React.FC<QuantityPricingProps> = ({
         alignItems: "center",
         width: "100%",
         fontFamily: "Futura, sans-serif",
+        padding: "0 16px",
       }}
     >
       <QuantitySelector

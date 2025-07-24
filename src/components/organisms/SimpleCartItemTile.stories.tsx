@@ -29,7 +29,11 @@ const meta: Meta<typeof SimpleCartItemTile> = {
   },
   decorators: [
     (Story) => (
-      <div style={{ padding: '20px', maxWidth: '100%' }}>
+      <div style={{ 
+        width: '100%', 
+        padding: '16px',
+        boxSizing: 'border-box',
+      }}>
         <Story />
       </div>
     ),
