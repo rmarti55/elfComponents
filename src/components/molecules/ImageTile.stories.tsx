@@ -44,25 +44,25 @@ const ImageTileWithState = (args: any) => {
 export const Default: Story = {
   render: (args) => <ImageTileWithState {...args} />,
   args: {
-    imageUrl: "https://via.placeholder.com/200x200/FFB6C1/FFFFFF?text=ELF+Blush",
+    imageUrl: "https://images.unsplash.com/photo-1596462502278-27bfdc403348?w=200&h=200&fit=crop",
     isFavorited: false,
-    productName: "ELF Blush",
+    productName: "ELF Camo Liquid Blush",
   },
 }
 
 export const Favorited: Story = {
   render: (args) => <ImageTileWithState {...args} />,
   args: {
-    imageUrl: "https://via.placeholder.com/200x200/FFB6C1/FFFFFF?text=ELF+Blush",
+    imageUrl: "https://images.unsplash.com/photo-1596462502278-27bfdc403348?w=200&h=200&fit=crop",
     isFavorited: true,
-    productName: "ELF Blush",
+    productName: "ELF Camo Liquid Blush",
   },
 }
 
 export const Lipstick: Story = {
   render: (args) => <ImageTileWithState {...args} />,
   args: {
-    imageUrl: "https://via.placeholder.com/200x200/FF69B4/FFFFFF?text=ELF+Lipstick",
+    imageUrl: "https://images.unsplash.com/photo-1586495777744-4413f21062fa?w=200&h=200&fit=crop",
     isFavorited: false,
     productName: "ELF Lipstick",
   },
@@ -71,7 +71,7 @@ export const Lipstick: Story = {
 export const Foundation: Story = {
   render: (args) => <ImageTileWithState {...args} />,
   args: {
-    imageUrl: "https://via.placeholder.com/200x200/F5DEB3/FFFFFF?text=ELF+Foundation",
+    imageUrl: "https://images.unsplash.com/photo-1556228720-195a672e8a03?w=200&h=200&fit=crop",
     isFavorited: false,
     productName: "ELF Foundation",
   },
