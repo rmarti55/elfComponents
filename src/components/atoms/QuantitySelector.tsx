@@ -57,6 +57,8 @@ const QuantitySelector: React.FC<QuantitySelectorProps> = ({
           padding: "0 12px",
           fontFamily: "Futura, sans-serif",
           lineHeight: "1",
+          minWidth: "40px",
+          width: "40px",
         }}
       >
         {quantity}
