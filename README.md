@@ -148,6 +148,9 @@ npm run build
 ### Atomic Storybook Coverage
 - **Every atom must have its own Storybook story.** Never skip atomic-level documentation. This ensures visibility, testability, and proper design system hygiene.
 
+### Atomic Composition Rule
+- **Always compose new organisms and molecules from existing atoms and molecules in the component library unless a clear gap is identified.** Do not create new primitives unless necessary.
+
 ## 📝 Recent Changes
 
 ### Latest Updates
