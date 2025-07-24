@@ -1,5 +1,5 @@
 import React from "react";
-import { RemoveButton } from "../atoms";
+import { TertiaryCTA } from "../atoms";
 
 interface CartItemTextBlockProps {
   productName: string;
@@ -32,7 +32,7 @@ const CartItemTextBlock: React.FC<CartItemTextBlockProps> = ({
           {msg}
         </div>
       ))}
-      <RemoveButton onClick={onRemove}>Remove</RemoveButton>
+      <TertiaryCTA onClick={onRemove}>Remove</TertiaryCTA>
     </div>
   );
 };

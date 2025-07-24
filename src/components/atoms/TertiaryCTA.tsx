@@ -1,11 +1,11 @@
 import React from "react";
 
-interface RemoveButtonProps {
+interface TertiaryCTAProps {
   onClick: () => void;
   children: React.ReactNode;
 }
 
-const RemoveButton: React.FC<RemoveButtonProps> = ({ onClick, children }) => (
+const TertiaryCTA: React.FC<TertiaryCTAProps> = ({ onClick, children }) => (
   <button
     onClick={onClick}
     style={{
@@ -27,4 +27,4 @@ const RemoveButton: React.FC<RemoveButtonProps> = ({ onClick, children }) => (
   </button>
 );
 
-export default RemoveButton; 
+export default TertiaryCTA; 

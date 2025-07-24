@@ -1,2 +1,2 @@
 export { default as QuantitySelector } from './QuantitySelector' 
-export { default as RemoveButton } from './RemoveButton'; 
+export { default as TertiaryCTA } from './TertiaryCTA'; 
