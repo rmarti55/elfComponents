@@ -44,6 +44,11 @@ src/
   - Features: Disabled states, zero quantity handling, customizable styling
   - Stories: Default, Zero, HighQuantity, Disabled, DisabledAtZero
 
+#### Molecules
+- **QuantityPricing** - Quantity selector with pricing display
+  - Features: Unit price, discounts, total calculations
+  - Stories: SimplePricing, DiscountedPricing, HighQuantity, ZeroQuantity, Disabled
+
 ## 📁 Project Structure
 
 ```
@@ -59,7 +64,10 @@ elfComponents/
 │   │   │   ├── QuantitySelector.tsx
 │   │   │   ├── QuantitySelector.stories.tsx
 │   │   │   └── index.ts
-│   │   ├── molecules/            # Molecular components (empty)
+│   │   ├── molecules/            # Molecular components
+│   │   │   ├── QuantityPricing.tsx
+│   │   │   ├── QuantityPricing.stories.tsx
+│   │   │   └── index.ts
 │   │   └── organisms/            # Organism components (empty)
 │   ├── App.tsx                   # Main application (minimal)
 │   └── main.tsx                  # Application entry point
