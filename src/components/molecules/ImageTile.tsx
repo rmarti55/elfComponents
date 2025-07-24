@@ -18,8 +18,8 @@ const ImageTile: React.FC<ImageTileProps> = ({
     <div
       style={{
         position: "relative",
-        width: "200px",
-        height: "200px",
+        width: "100%",
+        height: "100%",
         overflow: "hidden",
         backgroundImage: `url(${imageUrl})`,
         backgroundSize: "cover",
@@ -31,13 +31,13 @@ const ImageTile: React.FC<ImageTileProps> = ({
         onClick={onFavoriteToggle}
         style={{
           position: "absolute",
-          top: "12px",
-          right: "12px",
+          top: "8%",
+          right: "8%",
           background: "white",
           border: "none",
           borderRadius: "50%",
-          width: "32px",
-          height: "32px",
+          width: "clamp(24px, 25%, 32px)",
+          height: "clamp(24px, 25%, 32px)",
           display: "flex",
           alignItems: "center",
           justifyContent: "center",

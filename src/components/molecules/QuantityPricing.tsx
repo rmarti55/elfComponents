@@ -36,9 +36,12 @@ const QuantityPricing: React.FC<QuantityPricingProps> = ({
       style={{
         display: "flex",
         alignItems: "center",
+        justifyContent: "space-between",
         width: "100%",
         fontFamily: "Futura, sans-serif",
-        padding: "0 16px",
+        padding: "0",
+        boxSizing: "border-box",
+        gap: "clamp(8px, 3vw, 16px)",
       }}
     >
       <QuantitySelector
