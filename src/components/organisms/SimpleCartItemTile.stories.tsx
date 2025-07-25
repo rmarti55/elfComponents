@@ -6,7 +6,6 @@ const meta: Meta<typeof SimpleCartItemTile> = {
   title: 'Organisms/SimpleCartItemTile',
   component: SimpleCartItemTile,
   parameters: {
-    layout: 'fullscreen',
     viewport: {
       defaultViewport: 'mobile2',
       viewports: {
@@ -27,19 +26,6 @@ const meta: Meta<typeof SimpleCartItemTile> = {
       },
     },
   },
-  decorators: [
-    (Story) => (
-      <div style={{ 
-        width: '100%',
-        maxWidth: '100%',
-        padding: '0 16px',
-        margin: 0,
-        boxSizing: 'border-box',
-      }}>
-        <Story />
-      </div>
-    ),
-  ],
   tags: [],
 };
 
