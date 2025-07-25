@@ -49,8 +49,7 @@ const SimpleCartItemTile: React.FC<SimpleCartItemTileProps> = ({
           alignItems: 'flex-start', 
           justifyContent: 'center', 
           position: 'relative', 
-          overflow: 'hidden', 
-          borderRadius: "8px",
+          overflow: 'hidden',
         }}>
           <ImageTile
             imageUrl={imageUrl}
