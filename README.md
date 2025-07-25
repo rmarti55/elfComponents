@@ -22,7 +22,7 @@ src/
 - **React 19** + **TypeScript** - Modern component development
 - **Vite** - Fast build tool and development server
 - **Storybook 9** - Component documentation and preview layer
-- **Chakra UI 3** - Component library and styling system
+- **Custom CSS-in-JS** - Vanilla CSS styling with TypeScript
 - **Lucide React** - Icon library
 - **Vercel** - Deployment platform
 
@@ -31,10 +31,10 @@ src/
 ### ✅ Completed Setup
 - [x] React + TypeScript + Vite project initialized
 - [x] Storybook configured and deployed to Vercel
-- [x] Chakra UI integrated with custom theme
+- [x] Custom styling system with CSS-in-JS
 - [x] Atomic design folder structure created
 - [x] First atom component (QuantitySelector) implemented
-- [x] Clean Storybook deployment (no default Chakra UI components)
+- [x] Clean component library with zero external UI dependencies
 - [x] Automatic GitHub → Vercel deployment pipeline
 
 ### 🎨 Components Available
@@ -58,7 +58,7 @@ elfComponents/
 │   └── preview.tsx               # Storybook preview configuration
 ├── src/
 │   ├── foundations/              # Design tokens and theme
-│   │   └── theme.ts              # Chakra UI theme configuration
+│   │   └── theme.ts              # Global theme and styling configuration
 │   ├── components/
 │   │   ├── atoms/                # Atomic components
 │   │   │   ├── QuantitySelector.tsx
@@ -123,7 +123,7 @@ npm run build
 ### Storybook Deployment
 - **URL**: https://vercel.com/rmarti55s-projects/elf-components/deployments
 - **Auto-deploy**: Every push to `main` branch triggers deployment
-- **Clean**: Only shows custom components, no default Chakra UI components
+- **Clean**: Shows only our custom-built components with zero external UI dependencies
 
 ### Build Configuration
 - **Framework**: Storybook
@@ -139,7 +139,7 @@ npm run build
 - **Breakpoints**: Mobile-first responsive design
 
 ### Component Guidelines
-- Use Chakra UI as the foundation
+- Use CSS-in-JS with TypeScript for styling
 - Extend with e.l.f. specific styling
 - Include comprehensive Storybook stories
 - Follow atomic design principles
@@ -154,7 +154,7 @@ npm run build
 ## 📝 Recent Changes
 
 ### Latest Updates
-- ✅ Removed all Chakra UI auto-documentation from Storybook
+- ✅ Clean, minimalist documentation in Storybook
 - ✅ Implemented clean component-only Storybook deployment
 - ✅ Added QuantitySelector as first atom component
 - ✅ Configured automatic GitHub → Vercel deployment
@@ -165,7 +165,7 @@ npm run build
 ### Key Configuration
 - **`.storybook/main.ts`** - Clean Storybook config (no auto-docs)
 - **`vercel.json`** - Vercel deployment settings
-- **`src/foundations/theme.ts`** - Chakra UI theme configuration
+- **`src/foundations/theme.ts`** - Global theme variables and styling configuration
 
 ## 🎯 Next Steps
 
