@@ -5,8 +5,21 @@ const meta: Meta<typeof CartItemTextBlock> = {
   title: 'Molecules/CartItemTextBlock',
   component: CartItemTextBlock,
   parameters: {
-    layout: 'centered',
+    layout: 'fullscreen',
   },
+  decorators: [
+    (Story) => (
+      <div style={{ 
+        width: '100%',
+        maxWidth: '100%',
+        padding: '0 16px',
+        margin: 0,
+        boxSizing: 'border-box',
+      }}>
+        <Story />
+      </div>
+    ),
+  ],
   tags: [],
 };
 

@@ -6,8 +6,21 @@ const meta: Meta<typeof QuantitySelector> = {
   title: 'Atoms/QuantitySelector',
   component: QuantitySelector,
   parameters: {
-    layout: 'centered',
+    layout: 'fullscreen',
   },
+  decorators: [
+    (Story) => (
+      <div style={{ 
+        width: '100%',
+        maxWidth: '100%',
+        padding: '0 16px',
+        margin: 0,
+        boxSizing: 'border-box',
+      }}>
+        <Story />
+      </div>
+    ),
+  ],
   tags: [],
   argTypes: {
     quantity: {
