@@ -32,7 +32,7 @@ const meta: Meta<typeof SimpleCartItemTile> = {
       <div style={{ 
         width: '100%',
         maxWidth: '100%',
-        padding: 0,
+        padding: '0 16px',
         margin: 0,
         boxSizing: 'border-box',
       }}>
